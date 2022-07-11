@@ -1,0 +1,17 @@
+on: 
+  push:
+    branches:
+      - staging
+name: Raisely Deploy Staging
+jobs:
+  raiselyDeploy:
+    name: Raisely Deploy
+    runs-on: ubuntu-latest
+    environment: staging
+    steps:
+    - uses: actions/checkout@v2
+    - name: Raisely Deploy
+      uses: raisely/deploy@v1
+      with:
+        campaign: ${{ secrets.RAISELY_CAMPAIGN }}
+        apikey: ${{ secrets.RAISELY_API_KEY }}
