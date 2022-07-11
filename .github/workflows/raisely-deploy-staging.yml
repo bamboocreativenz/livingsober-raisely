@@ -3,8 +3,6 @@ on:
     branches:
       - staging
 name: Raisely Deploy Staging
-env:
-  SERVER: staging
 jobs:
   raiselyDeploy:
     name: Raisely Deploy
@@ -17,5 +15,5 @@ jobs:
     - name: Raisely Deploy
       uses: raisely/deploy@v1
       with:
-        campaign: ${{ secrets.RAISELY_CAMPAIGN }}
-        apikey: ${{ secrets.RAISELY_API_KEY }}
+        campaign: ${{ secrets.RAISELY_CAMPAIGN_STAGING }}
+        apikey: ${{ secrets.RAISELY_API_KEY_STAGING }}
