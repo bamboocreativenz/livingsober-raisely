@@ -7,7 +7,9 @@ jobs:
   raiselyDeploy:
     name: Raisely Deploy
     runs-on: ubuntu-latest
-    environment: staging
+    environment:
+      name: staging
+      url: https://living-sober-dev.raisely.com/
     steps:
     - uses: actions/checkout@v2
     - name: Raisely Deploy
