@@ -1,6 +1,9 @@
 # Living Sober - Raisely
 Raisely Components and Styles for livingsober.org.nz donation website
 
+## Security
+**This is a public repo so take care of what you are commiting into it**
+
 ## Dev Setup
 Raisely uses a react component library and stylesheets that we can use to overide and style existing components and add new ones.
 
@@ -43,3 +46,6 @@ Every component needs a js and json file in a folder, as well as needing to be r
 ```
 raisely create
 ```
+
+## Continuous Deployment
+Our repo is setup with 2 Github Workfolws that automatically deploy the `main` branch to the production campaign and the `staging` branch to a staging campaign. The environment config and secrets for these can be found in `github repo -> settings -> environments`
