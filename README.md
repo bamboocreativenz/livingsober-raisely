@@ -37,3 +37,9 @@ If you want to live update the site (ie a dev site or draft site) you can run ra
 ```
 raisely start
 ```
+
+### Adding a new Raisely Component
+Every component needs a js and json file in a folder, as well as needing to be registered within Raisely correctly. Use the create command to setup a new component.
+```
+raisely create
+```
