@@ -3,6 +3,8 @@ on:
     branches:
       - staging
 name: Raisely Deploy Staging
+env:
+  SERVER: staging
 jobs:
   raiselyDeploy:
     name: Raisely Deploy
