@@ -7,6 +7,8 @@ Raisely uses a react component library and stylesheets that we can use to overid
 Raisley also essentially acts as a second remote, even though its not using git. Regardless you can pull down and push up code to it.
 But you can't look at the history on it. So be careful
 
+> Read the reference material on the [Raisely Dev Quickstart](https://developers.raisely.com/docs/developer-quickstart)
+
 To setup the the [Raisely CLI](https://github.com/raisely/cli) follow thes instructions:
 
 1. Install the CLI
