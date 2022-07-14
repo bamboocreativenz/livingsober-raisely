@@ -13,7 +13,7 @@ jobs:
       url: https://${{ secrets.RAISELY_CAMPAIGN_NAME }}.raisely.com/
     steps:
     - uses: actions/checkout@v2
- - name: Create folder 
+    - name: Create folder 
       run: mkdir stylesheets
     - name: Move and Rename styles folder 
       run: mv campaign-styles stylesheets/${{ secrets.RAISELY_CAMPAIGN_NAME }} 
