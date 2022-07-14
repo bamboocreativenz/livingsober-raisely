@@ -5,14 +5,13 @@ on:
 name: Raisely Deploy Staging
 env:
   CAMPAIGN_NAME: ${{ secrets.RAISELY_CAMPAIGN_NAME }}
-  url: https://living-sober.raisely.com/
 jobs:
   raiselyDeploy:
     name: Raisely Deploy
     runs-on: ubuntu-latest
     environment:
       name: production
-      url: $url
+      url: https://living-sober.raisely.com/
     steps:
     - uses: actions/checkout@v2
     - name: Create folder 
