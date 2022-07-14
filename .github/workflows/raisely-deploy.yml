@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: production
-      url: https://${{ secrets.RAISELY_CAMPAIGN_NAME }}.raisely.com/
+      url: "https://${{ secrets.RAISELY_CAMPAIGN_NAME }}.raisely.com/"
     steps:
     - uses: actions/checkout@v2
     - name: Create folder 
