@@ -3,21 +3,23 @@ on:
     branches:
       - staging
 name: Raisely Deploy Staging
+env:
+  CAMPAIGN_NAME: ${{ secrets.RAISELY_CAMPAIGN_NAME_DEV }}
 jobs:
   raiselyDeploy:
     name: Raisely Deploy
     runs-on: ubuntu-latest
     environment:
       name: production
-      url: https://${{ secrets.RAISELY_CAMPAIGN_NAME_DEV }}.raisely.com/
+      url: https://$CAMPAIGN_NAME.raisely.com/
     steps:
     - uses: actions/checkout@v2
     - name: Create folder 
       run: mkdir stylesheets
     - name: Move and Rename styles folder 
-      run: mv campaign-styles stylesheets/${{ secrets.RAISELY_CAMPAIGN_NAME_DEV }} 
+      run: mv campaign-styles stylesheets/$CAMPAIGN_NAME 
     - name: Rename file 
-      run:  mv stylesheets/${{ secrets.RAISELY_CAMPAIGN_NAME_DEV }}/custom-styles.scss stylesheets/${{ secrets.RAISELY_CAMPAIGN_NAME_DEV }}/${{ secrets.RAISELY_CAMPAIGN_NAME_DEV }}.scss
+      run:  mv stylesheets/$CAMPAIGN_NAME/custom-styles.scss stylesheets/$CAMPAIGN_NAME/$CAMPAIGN_NAME.scss
     - name: Raisely Deploy
       uses: raisely/deploy@v1
       with:
