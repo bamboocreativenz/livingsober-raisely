@@ -5,7 +5,7 @@ on:
 name: Raisely Deploy Staging
 env:
   CAMPAIGN_NAME: ${{ secrets.RAISELY_CAMPAIGN_NAME }}
-  url: https://$CAMPAIGN_NAME.raisely.com/
+  url: https://living-sober-dev.raisely.com/
 jobs:
   raiselyDeploy:
     name: Raisely Deploy
