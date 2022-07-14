@@ -13,7 +13,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Rename file 
-      run: mv -r campaign-styles stylesheets/livingsober && mv stylesheets/livingsober/campaign-styles.scss stylesheets/livingsober/livingsober.scss
+      run: mv campaign-styles stylesheets/livingsober && mv stylesheets/livingsober/campaign-styles.scss stylesheets/livingsober/livingsober.scss
     - name: Raisely Deploy
       uses: raisely/deploy@v1
       with:
