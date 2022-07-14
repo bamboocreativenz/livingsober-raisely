@@ -2,6 +2,7 @@ on:
   push:
     branches:
       - main
+      - staging
 name: Raisely Deploy
 jobs:
   raiselyDeploy:
@@ -9,17 +10,17 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: production
-      url: https://living-sober.raisely.com/
+      url: https://${{ secrets.RAISELY_CAMPAIGN_NAME }}.raisely.com/
     steps:
     - uses: actions/checkout@v2
  - name: Create folder 
       run: mkdir stylesheets
     - name: Move and Rename styles folder 
-      run: mv campaign-styles stylesheets/living-sober 
+      run: mv campaign-styles stylesheets/${{ secrets.RAISELY_CAMPAIGN_NAME }} 
     - name: Rename file 
-      run:  mv stylesheets/living-sober/campaign-styles.scss stylesheets/living-sober/living-sober.scss
+      run:  mv stylesheets/${{ secrets.RAISELY_CAMPAIGN_NAME }}/custom-styles.scss stylesheets/${{ secrets.RAISELY_CAMPAIGN_NAME }}/${{ secrets.RAISELY_CAMPAIGN_NAME }}.scss
     - name: Raisely Deploy
       uses: raisely/deploy@v1
       with:
-        campaign: ${{ secrets.RAISELY_CAMPAIGN_PRODUCTION }}
-        apikey: ${{ secrets.RAISELY_API_KEY_PRODUCTION }}
+        campaign: ${{ secrets.RAISELY_CAMPAIGN }}
+        apikey: ${{ secrets.RAISELY_API_KEY }}
