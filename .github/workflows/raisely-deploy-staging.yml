@@ -12,8 +12,12 @@ jobs:
       url: https://living-sober-dev.raisely.com/
     steps:
     - uses: actions/checkout@v2
+    - name: Creat folder 
+      run: mkdir stylesheets
+    - name: Move and Rename styles folder 
+      run: mv campaign-styles stylesheets/livingsober-dev 
     - name: Rename file 
-      run: mv campaign-styles stylesheets/livingsober-dev && mv stylesheets/livingsober-dev/campaign-styles.scss stylesheets/livingsober-dev/livingsober.scss
+      run:  mv stylesheets/livingsober-dev/campaign-styles.scss stylesheets/livingsober-dev/livingsober.scss
     - name: Raisely Deploy
       uses: raisely/deploy@v1
       with:
