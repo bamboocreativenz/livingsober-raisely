@@ -3,12 +3,10 @@ on:
     branches: 
       - main
     types: [closed]
-name: Raisely Deploy Staging
-env:
-  CAMPAIGN_NAME: ${{ secrets.RAISELY_CAMPAIGN_NAME }}
+name: Deploy Production
 jobs:
   raiselyDeploy:
-    name: Raisely Deploy
+    name: Raisely Deploy Production
     runs-on: ubuntu-latest
     environment:
       name: production
@@ -18,9 +16,9 @@ jobs:
     - name: Create folder 
       run: mkdir stylesheets
     - name: Move and Rename styles folder 
-      run: mv campaign-styles stylesheets/{{ secrets.RAISELY_CAMPAIGN_NAME }}
+      run: mv campaign-styles stylesheets/${{ secrets.RAISELY_CAMPAIGN_NAME }}
     - name: Rename file 
-      run:  mv stylesheets/{{ secrets.RAISELY_CAMPAIGN_NAME }}/custom-styles.scss stylesheets/{{ secrets.RAISELY_CAMPAIGN_NAME }}/{{ secrets.RAISELY_CAMPAIGN_NAME }}.scss
+      run:  mv stylesheets/${{ secrets.RAISELY_CAMPAIGN_NAME }}/custom-styles.scss stylesheets/${{ secrets.RAISELY_CAMPAIGN_NAME }}/${{ secrets.RAISELY_CAMPAIGN_NAME }}.scss
     - name: Raisely Deploy
       uses: raisely/deploy@v1
       with:
