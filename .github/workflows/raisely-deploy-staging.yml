@@ -13,11 +13,11 @@ jobs:
     - name: Create folder
       run: mkdir stylesheets
     - name: Move and Rename styles folder
-      run: mv campaign-styles stylesheets/${{ secrets.RAISELY_CAMPAIGN_NAME }}
+      run: mv campaign-styles stylesheets/living-sober-dev
     - name: Rename file 
-      run:  mv stylesheets/${{ secrets.RAISELY_CAMPAIGN_NAME }}/custom-styles.scss stylesheets/${{ secrets.RAISELY_CAMPAIGN_NAME }}/${{ secrets.RAISELY_CAMPAIGN_NAME }}.scss
+      run:  mv stylesheets/living-sober-dev/custom-styles.scss stylesheets/living-sober-dev/living-sober-dev.scss
     - name: Raisely Deploy
       uses: raisely/deploy@v1
       with:
-        campaign: ${{ secrets.RAISELY_CAMPAIGN_UUID }}
-        apikey: ${{ secrets.RAISELY_API_KEY }}
+        campaign: ${{ secrets.RAISELY_CAMPAIGN_UUID_DEV }}
+        apikey: ${{ secrets.RAISELY_API_KEY_DEV }}
