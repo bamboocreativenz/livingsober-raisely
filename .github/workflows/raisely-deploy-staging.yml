@@ -2,12 +2,12 @@ on:
   push:
     branches:
       - staging
-name: Raisely Deploy Staging
+name: Deploy Staging
 env:
   CAMPAIGN_NAME: ${{ secrets.RAISELY_CAMPAIGN_NAME }}
 jobs:
   raiselyDeploy:
-    name: Raisely Deploy
+    name: Raisely Deploy Staging
     runs-on: ubuntu-latest
     environment:
       name: staging
