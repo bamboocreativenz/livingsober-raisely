@@ -3,12 +3,12 @@ on:
     branches: 
       - main
     types: [closed]
-name: Raisely Deploy Staging
+name: Deploy Production
 env:
   CAMPAIGN_NAME: ${{ secrets.RAISELY_CAMPAIGN_NAME }}
 jobs:
   raiselyDeploy:
-    name: Raisely Deploy
+    name: Raisely Deploy Production
     runs-on: ubuntu-latest
     environment:
       name: production
