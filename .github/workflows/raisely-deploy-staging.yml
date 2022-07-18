@@ -10,14 +10,14 @@ jobs:
     name: Raisely Deploy
     runs-on: ubuntu-latest
     environment:
-      name: production
+      name: staging
       url: https://living-sober-dev.raisely.com/
     steps:
     - uses: actions/checkout@v2
-    - name: Create folder 
+    - name: Create folder
       run: mkdir stylesheets
-    - name: Move and Rename styles folder 
-      run: mv campaign-styles stylesheets/$CAMPAIGN_NAME 
+    - name: Move and Rename styles folder
+      run: mv campaign-styles stylesheets/$CAMPAIGN_NAME
     - name: Rename file 
       run:  mv stylesheets/$CAMPAIGN_NAME/custom-styles.scss stylesheets/$CAMPAIGN_NAME/$CAMPAIGN_NAME.scss
     - name: Raisely Deploy
