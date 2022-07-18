@@ -7,6 +7,9 @@ jobs:
   raiselyDeploy:
     name: Raisely Deploy Staging
     runs-on: ubuntu-latest
+    environment:
+      name: staging
+      url: https://living-sober-dev.raisely.com/
     steps:
     - uses: actions/checkout@v2
     - name: Create folder
@@ -18,5 +21,5 @@ jobs:
     - name: Raisely Deploy
       uses: raisely/deploy@v1
       with:
-        campaign: ${{ secrets.RAISELY_CAMPAIGN_UUID_DEV }}
-        apikey: ${{ secrets.RAISELY_API_KEY_DEV }}
+        campaign: ${{ secrets.RAISELY_CAMPAIGN_UUID }}
+        apikey: ${{ secrets.RAISELY_API_KEY }}
