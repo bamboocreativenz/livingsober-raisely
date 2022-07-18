@@ -7,9 +7,7 @@ jobs:
   raiselyDeploy:
     name: Raisely Deploy Staging
     runs-on: ubuntu-latest
-    environment:
-      name: staging
-      url: https://living-sober-dev.raisely.com/
+    environment: staging
     steps:
     - uses: actions/checkout@v2
     - name: Create folder

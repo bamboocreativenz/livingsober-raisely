@@ -8,9 +8,7 @@ jobs:
   raiselyDeploy:
     name: Raisely Deploy Production
     runs-on: ubuntu-latest
-    environment:
-      name: production
-      url: https://living-sober.raisely.com/
+    environment: production
     steps:
     - uses: actions/checkout@v2
     - name: Create folder 
