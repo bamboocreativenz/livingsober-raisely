@@ -1,7 +1,8 @@
 on:
-  push:
-    branches:
+  pull_request:
+    branches: 
       - main
+    types: [closed]
 name: Raisely Deploy Staging
 env:
   CAMPAIGN_NAME: ${{ secrets.RAISELY_CAMPAIGN_NAME }}
@@ -17,9 +18,9 @@ jobs:
     - name: Create folder 
       run: mkdir stylesheets
     - name: Move and Rename styles folder 
-      run: mv campaign-styles stylesheets/$CAMPAIGN_NAME 
+      run: mv campaign-styles stylesheets/{{ secrets.RAISELY_CAMPAIGN_NAM }}E
     - name: Rename file 
-      run:  mv stylesheets/$CAMPAIGN_NAME/custom-styles.scss stylesheets/$CAMPAIGN_NAME/$CAMPAIGN_NAME.scss
+      run:  mv stylesheets/{{ secrets.RAISELY_CAMPAIGN_NAME }}/custom-styles.scss stylesheets/{{ secrets.RAISELY_CAMPAIGN_NAME }}/{{ secrets.RAISELY_CAMPAIGN_NAME }}.scss
     - name: Raisely Deploy
       uses: raisely/deploy@v1
       with:
