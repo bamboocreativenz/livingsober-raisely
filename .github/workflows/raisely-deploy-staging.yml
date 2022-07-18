@@ -7,7 +7,6 @@ jobs:
   raiselyDeploy:
     name: Raisely Deploy Staging
     runs-on: ubuntu-latest
-    environment: staging
     steps:
     - uses: actions/checkout@v2
     - name: Create folder
