@@ -1,8 +1,7 @@
 on:
-  pull_request:
+  push:
     branches: 
       - staging
-    types: [closed]
 name: Deploy Staging
 jobs:
   raiselyDeploy:
