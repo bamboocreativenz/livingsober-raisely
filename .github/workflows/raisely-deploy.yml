@@ -8,9 +8,6 @@ jobs:
   raiselyDeploy:
     name: Raisely Deploy Production
     runs-on: ubuntu-latest
-    environment:
-      name: production
-      url: https://living-sober.raisely.com/
     steps:
     - uses: actions/checkout@v2
     - name: Create folder 
@@ -22,5 +19,5 @@ jobs:
     - name: Raisely Deploy
       uses: raisely/deploy@v1
       with:
-        campaign: ${{ secrets.RAISELY_CAMPAIGN_UUID }}
-        apikey: ${{ secrets.RAISELY_API_KEY }}
+        campaign: ${{ secrets.RAISELY_CAMPAIGN_UUID_PROD }}
+        apikey: ${{ secrets.RAISELY_API_KEY_PROD }}
