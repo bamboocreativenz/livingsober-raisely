@@ -1,26 +1,16 @@
 on:
-  pull_request:
+  push:
     branches: 
       - staging
-    types: [closed]
 name: Deploy Staging
 jobs:
   raiselyDeploy:
     name: Raisely Deploy Staging
     runs-on: ubuntu-latest
-    environment:
-      name: staging
-      url: https://living-sober-dev.raisely.com/
     steps:
     - uses: actions/checkout@v2
-    - name: Create folder
-      run: mkdir stylesheets
-    - name: Move and Rename styles folder
-      run: mv campaign-styles stylesheets/${{ secrets.RAISELY_CAMPAIGN_NAME }}
-    - name: Rename file 
-      run:  mv stylesheets/${{ secrets.RAISELY_CAMPAIGN_NAME }}/custom-styles.scss stylesheets/${{ secrets.RAISELY_CAMPAIGN_NAME }}/${{ secrets.RAISELY_CAMPAIGN_NAME }}.scss
     - name: Raisely Deploy
       uses: raisely/deploy@v1
       with:
-        campaign: ${{ secrets.RAISELY_CAMPAIGN_UUID }}
-        apikey: ${{ secrets.RAISELY_API_KEY }}
+        campaign: ${{ secrets.RAISELY_CAMPAIGN_UUID_DEV }}
+        apikey: ${{ secrets.RAISELY_API_KEY_DEV }}

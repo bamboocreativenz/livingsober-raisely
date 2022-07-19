@@ -1,0 +1,118 @@
+// ---------------------- //
+// STYLE VARIABLES
+// ---------------------- //
+
+$donationFormBorderColor: #FF9D00;
+
+
+// ORGANIC SHAPES //
+$hasOrganicShape: false; // apply randomized shape overlays to images
+
+
+// ---------------------- //
+// ELEMENTS
+// ---------------------- //
+
+// Navigation
+header.row .row__container {
+  padding-right: 0;
+  .col--12 {
+    padding-right: 0;
+  }
+}
+.header__social--desktop {
+  display: none;
+}
+
+.page-navigation a {
+  background: transparent;
+  color: $donationFormBorderColor!important;
+  border: solid 3px $donationFormBorderColor;
+  border-radius: 50px;
+  &:after {
+    // Cheatsheet https://fontawesome.com/v5/cheatsheet/free/solid
+    // DL Note you have to add this script to the head of the document through the raisely ui
+    // <link rel="stylesheet" type="text/css" href="//use.fontawesome.com/releases/v5.14.0/css/all.css">
+    content: '\f35d';
+    font-family: "Font Awesome 5 Free";
+    font-style: normal;
+    font-weight: 900;
+    text-decoration: inherit;
+    margin-left:5px;
+    color: $donationFormBorderColor;
+  }
+  &:hover {
+    background: $donationFormBorderColor;
+    color: #fff!important;
+    border: solid 3px $donationFormBorderColor;
+    &:after {
+      color: #fff;
+    }
+  }
+}
+
+// Hero Row
+.row--hero .row__container {
+  padding-top: 0;
+  .col--6 {
+    @include respond-to('max-desktop') {
+      width: 100%;
+      padding: 0 25% 0 25%;
+    }
+    @include respond-to('tablet') {
+      width: 100%;
+      padding: 0 15% 20px 15%;
+    }
+    @include respond-to('mobile') {
+      width: 100%;
+      padding: 0 5% 20px 5%;
+    }
+  }
+}
+
+.row__bg {
+  @include respond-to('max-desktop') {
+    opacity: 55%;
+  }
+}
+
+// Donation Form
+.col__container .donation-form {
+  &__anonymous {
+    display: none;
+  }
+  &__other-field {
+    width: 50%;
+  }
+}
+
+.row .ls-form {
+  @include respond-to('desktop') {
+    min-height: 500px;
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+  }
+  .col__container {
+    padding-top: 0.5em;
+    margin-top: 30px;
+  }
+}
+
+// ---------------------- //
+// ✨ YOUR CUSTOM STYLES
+// ---------------------- //
+
+// 📖  Check out our documentation for more information on how you can style you campaign: https://developers.raisely.com/docs/styling-introduction
+
+// Add your own custom css below to get things looking just how you want
+
+.center {
+  text-align: center;
+}
+ 
+// Footer
+.page 
+.row__layout--footer .share::before {
+  color: #444444;
+}

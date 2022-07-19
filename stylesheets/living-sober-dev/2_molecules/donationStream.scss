@@ -2,7 +2,7 @@
 	&--direction-horizontal {
 		width: calc(100% + 8px);
 		margin: 0 -4px;
-		border-bottom: 1px solid ($primaryGrey - 25);
+		border-bottom: 1px solid adjust-color($primaryGrey, $lightness: -25%);
 
 		.donation-stream__item {
 			padding: 0.5rem 2rem 1rem 2rem;
@@ -49,7 +49,7 @@
 	&--direction-vertical {
 		.donation-stream__item {
 			padding: 1rem 0;
-			border-top: 1px solid ($primaryGrey - 25);
+			border-top: 1px solid adjust-color($primaryGrey, $lightness: -25%);
 
 			&:first-child {
 				border-top: 0;
@@ -86,7 +86,7 @@
 		margin-top: 1rem;
 		> button.button {
 			color: $secondaryColor;
-			border-color: ($primaryGrey - 25);
+			border-color: adjust-color($primaryGrey, $lightness: -25%);
 		}
 	}
 }
