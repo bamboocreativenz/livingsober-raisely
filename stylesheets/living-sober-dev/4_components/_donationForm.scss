@@ -184,15 +184,18 @@
 
 		&-btn {
 			padding: 0.75em 1em;
-			margin: 0;
+			margin: -3px -2.5px!important;
 
 			font-weight: bold;
-			line-height: 1;
+			line-height: 0.9;
 			letter-spacing: 0.05em;
 
 			background: transparent;
 			color: accessible-color($btnPrimaryBgColor, white, 7.5);
-			border-color: darken($btnPrimaryBgColor, 20);
+			// DL Set the default border to just top and bottom so there are no gutters
+			border: none;
+			border-top: solid 3px $donationFormBorderColor;
+			border-bottom: solid 3px $donationFormBorderColor;
 
 			&--inactive:hover,
 			&--inactive:focus {
@@ -202,22 +205,32 @@
 			&:first-of-type { 
 				// DL update to use new border radius type variable
 				border-radius: $borderRadiusAmountType 0 0 $borderRadiusAmountType;
+				// DL set the left border
+				border-left: solid 3px $donationFormBorderColor;
 			}
 
 			&:last-of-type {
 				// DL update to use new border radius type variable
 				border-radius: 0 $borderRadiusAmountType $borderRadiusAmountType 0;
+				// DL set the right border
+				border-right: solid 3px $donationFormBorderColor;
 			}
 
 			&--active {
 				pointer-events: none;
-				background: white;
-				color: accessible-color(
-					$primaryLight,
-					darken($primaryDefault, 20)
-				);
+				background: $primaryLight;
+				color: black;
+				border-left: solid 3px $donationFormBorderColor;
+				border-right: solid 3px $donationFormBorderColor;
+				border-radius: $borderRadiusAmountType!important;
 			}
 		}
+	}
+
+	&__amount-type {
+		border: solid 3px $donationFormBorderColor;
+		border-radius: $borderRadiusAmountType!important;
+		margin: -20px
 	}
 
 	&__amount-type,
