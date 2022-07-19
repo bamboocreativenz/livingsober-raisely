@@ -1,6 +1,7 @@
 .mobile-tab-menu {
 	@include respond-to('mobile', false) {
-		display: flex;
+		// DL Hide the sticky tabbar
+		display: none;
 		position: fixed;
 		bottom: 0;
 		left: 0;
