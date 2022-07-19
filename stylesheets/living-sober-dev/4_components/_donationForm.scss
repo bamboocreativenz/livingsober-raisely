@@ -119,6 +119,7 @@
 			transition: 0.3s $easeOut;
 			position: relative;
 			font-size: 1.25em;
+			min-width: 24%;
 
 			// If button background is super light
 			@if lightness($btnPrimaryBgColor) >
