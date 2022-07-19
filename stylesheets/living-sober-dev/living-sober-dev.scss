@@ -1,0 +1,39 @@
+// ---------------------- //
+// STYLE VARIABLES
+// ---------------------- //
+
+$border_color: #e6e6e6;
+$donationBtnBgColor: #00a0e9;
+$donationBtnTextColor: #fff;
+$donationFormHeaderColor: #00a0e9;
+
+// ORGANIC SHAPES //
+$hasOrganicShape: false; // apply randomized shape overlays to images
+
+// ---------------------- //
+// ELEMENTS
+// ---------------------- //
+
+.donation-form {
+  &__anonymous {
+    display: none!important;
+  }
+}
+
+// ---------------------- //
+// ✨ YOUR CUSTOM STYLES
+// ---------------------- //
+
+// 📖  Check out our documentation for more information on how you can style you campaign: https://developers.raisely.com/docs/styling-introduction
+
+// Add your own custom css below to get things looking just how you want
+
+.center {
+  text-align: center;
+}
+ 
+// Footer
+.page 
+.row__layout--footer .share::before {
+  color: #444444;
+}
