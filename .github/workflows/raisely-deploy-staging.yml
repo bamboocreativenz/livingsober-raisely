@@ -10,7 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Create folder
-      run: "[ ! -f stylesheets ] && mkdir stylesheets"
+      run: '(test -f stylesheets && echo stylesheets exists) || mkdir stylesheets'
     - name: Move and Rename styles folder
       run: mv campaign-styles stylesheets/living-sober-dev
     - name: Rename file 
