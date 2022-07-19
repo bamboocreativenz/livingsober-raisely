@@ -10,6 +10,17 @@ $hasOrganicShape: false; // apply randomized shape overlays to images
 // ELEMENTS
 // ---------------------- //
 
+// Navigation
+header.row .row__container {
+  padding-right: 0;
+  .col--12 {
+    padding-right: 0;
+  }
+}
+.header__social--desktop {
+  display: none;
+}
+
 // Hero Row
 .row--hero .row__container {
   padding-top: 0;
