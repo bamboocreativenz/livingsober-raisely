@@ -10,12 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Create folder 
-      run: mkdir stylesheets
     - name: Move and Rename styles folder 
-      run: mv campaign-styles stylesheets/living-sober
+      run: mv stylesheets/living-sober-dev stylesheets/living-sober
     - name: Rename file 
-      run:  mv stylesheets/living-sober/custom-styles.scss stylesheets/living-sober/living-sober.scss
+      run:  mv stylesheets/living-sober/living-sober-dev.scss stylesheets/living-sober/living-sober.scss
     - name: Raisely Deploy
       uses: raisely/deploy@v1
       with:
