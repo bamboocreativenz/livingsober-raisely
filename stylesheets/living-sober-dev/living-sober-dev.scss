@@ -8,32 +8,6 @@ $donationFormBorderColor: #FF9D00;
 // ORGANIC SHAPES //
 $hasOrganicShape: false; // apply randomized shape overlays to images
 
-// ---------------------- //
-// FontAwesome ICONS
-// ---------------------- //
-
-@font-face {
-  font-family: "FontAwesome";
-  font-weight: normal;
-  font-style : normal;
-         src : url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/webfonts/fa-brands-400.eot");
-         src : url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/webfonts/fa-brands-400.svg") format('svg'), url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/webfonts/fa-brands-400.ttf") format('truetype'), url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/webfonts/fa-brands-400.woff") format('woff'), url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/webfonts/fa-brands-400.woff2") format('woff2');
-}
-@font-face {
-  font-family: "FontAwesomeRegular";
-  font-weight: normal;
-  font-style : normal;
-         src : url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/webfonts/fa-regular-400.eot");
-         src : url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/webfonts/fa-regular-400.svg") format('svg'), url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/webfonts/fa-regular-400.ttf") format('truetype'), url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/webfonts/fa-regular-400.woff") format('woff'), url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/webfonts/fa-regular-400.woff2") format('woff2');
-}
-@font-face {
-  font-family: "FontAwesome";
-  font-weight: normal;
-  font-style : bold;
-         src : url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/webfonts/fa-regular-900.eot");
-         src : url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/webfonts/fa-regular-900.svg") format('svg'), url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/webfonts/fa-regular-900.ttf") format('truetype'), url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/webfonts/fa-regular-900.woff") format('woff'), url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/webfonts/fa-regular-900.woff2") format('woff2');
-}
-
 
 // ---------------------- //
 // ELEMENTS
@@ -55,20 +29,26 @@ header.row .row__container {
   color: $donationFormBorderColor!important;
   border: solid 3px $donationFormBorderColor;
   border-radius: 50px;
+  &:after {
+    // Cheatsheet https://fontawesome.com/v5/cheatsheet/free/solid
+    // DL Note you have to add this script to the head of the document through the raisely ui
+    // <link rel="stylesheet" type="text/css" href="//use.fontawesome.com/releases/v5.14.0/css/all.css">
+    content: '\f35d';
+    font-family: "Font Awesome 5 Free";
+    font-style: normal;
+    font-weight: 900;
+    text-decoration: inherit;
+    margin-left:5px;
+    color: $donationFormBorderColor;
+  }
   &:hover {
     background: $donationFormBorderColor;
     color: #fff!important;
     border: solid 3px $donationFormBorderColor;
+    &:after {
+      color: #fff;
+    }
   }
-  &:after {
-    content: '\f08e';
-    font-family: "FontAwesomeRegular";
-    font-style: normal;
-    font-weight: normal;
-    text-decoration: inherit;
-    margin-left:5px;
-    color:red;
-}
 }
 
 // Hero Row
