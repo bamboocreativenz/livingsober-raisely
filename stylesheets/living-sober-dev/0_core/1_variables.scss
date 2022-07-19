@@ -38,7 +38,10 @@ $boxShadow: (
 /* ADJUSTABLE VARIABLES */
 
 // General
-$borderRadius: 5px; // roundness of corners
+$borderRadius: 0; // roundness of corners
+
+// DL add new border radius for payment types
+$borderRadiusAmountType: 30px; // roundness of amount type selector
 
 // Progress Bar
 $progressBarColor: if(

@@ -198,12 +198,14 @@
 				color: accessible-color($btnPrimaryBgColor, white, 4.5);
 			}
 
-			&:first-of-type {
-				border-radius: $borderRadius 0 0 $borderRadius;
+			&:first-of-type { 
+				// DL update to use new border radius type variable
+				border-radius: $borderRadiusAmountType 0 0 $borderRadiusAmountType;
 			}
 
 			&:last-of-type {
-				border-radius: 0 $borderRadius $borderRadius 0;
+				// DL update to use new border radius type variable
+				border-radius: 0 $borderRadiusAmountType $borderRadiusAmountType 0;
 			}
 
 			&--active {
