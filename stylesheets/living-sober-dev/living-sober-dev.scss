@@ -18,9 +18,13 @@ $hasOrganicShape: false; // apply randomized shape overlays to images
 .row--hero .row__container .col--6 {
   @include respond-to('max-desktop') {
     width: 100%;
-    padding: 0 50px 20px 50px;
+    padding: 0 25% 20px 25%;
   }
   @include respond-to('tablet') {
+    width: 100%;
+    padding: 0 15% 20px 15%;
+  }
+  @include respond-to('mobile') {
     width: 100%;
     padding: 0 5% 20px 5%;
   }
@@ -30,6 +34,9 @@ $hasOrganicShape: false; // apply randomized shape overlays to images
 .col__container .donation-form {
   &__anonymous {
     display: none;
+  }
+  &__other-field {
+    width: 50%;
   }
 }
 
