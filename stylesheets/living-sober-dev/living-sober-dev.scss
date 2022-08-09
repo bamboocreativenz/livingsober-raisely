@@ -18,8 +18,10 @@ $hasOrganicShape: false; // apply randomized shape overlays to images
   color: $logoColor;
 }
 
-.block--text-heading {
-  color: $logoColor;
+#row--1 {
+  h2.block--text-heading {
+    color: $logoColor;
+  }
 }
 
 .row__container {
