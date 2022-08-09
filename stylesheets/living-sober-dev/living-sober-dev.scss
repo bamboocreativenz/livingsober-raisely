@@ -42,29 +42,35 @@ header.row .row__container {
   display: none;
 }
 
-.page-navigation a {
-  background: transparent;
-  color: $donationFormBorderColor!important;
-  border: solid 3px $donationFormBorderColor;
-  border-radius: 50px;
-  &:after {
-    // Cheatsheet https://fontawesome.com/v5/cheatsheet/free/solid
-    // DL Note you have to add this script to the head of the document through the raisely ui
-    // <link rel="stylesheet" type="text/css" href="//use.fontawesome.com/releases/v5.14.0/css/all.css">
-    content: '\f35d';
-    font-family: "Font Awesome 5 Free";
-    font-style: normal;
-    font-weight: 900;
-    text-decoration: inherit;
-    margin-left:5px;
-    color: $donationFormBorderColor;
+.page-navigation {
+  margin-right: 60px;
+  @include respond-to('desktop') {
+    margin-right: 0px;
   }
-  &:hover {
-    background: $donationFormBorderColor;
-    color: #fff!important;
+  & a {
+    background: transparent;
+    color: $donationFormBorderColor!important;
     border: solid 3px $donationFormBorderColor;
+    border-radius: 50px;
     &:after {
-      color: #fff;
+      // Cheatsheet https://fontawesome.com/v5/cheatsheet/free/solid
+      // DL Note you have to add this script to the head of the document through the raisely ui
+      // <link rel="stylesheet" type="text/css" href="//use.fontawesome.com/releases/v5.14.0/css/all.css">
+      content: '\f35d';
+      font-family: "Font Awesome 5 Free";
+      font-style: normal;
+      font-weight: 900;
+      text-decoration: inherit;
+      margin-left:5px;
+      color: $donationFormBorderColor;
+    }
+    &:hover {
+      background: $donationFormBorderColor;
+      color: #fff!important;
+      border: solid 3px $donationFormBorderColor;
+      &:after {
+        color: #fff;
+      }
     }
   }
 }
@@ -82,6 +88,7 @@ header.row .row__container {
     }
   }
   &--mobile {
+    margin-right: 30px;
     @include respond-to('tablet') {
       display: none;
     }
