@@ -146,6 +146,18 @@ header.row .row__container {
   }
 }
 
+.donation-form__title {
+  .donation-form__title {
+      margin-top: 0;
+  }
+}
+
+.share, .donation-form__post-donate__subheading, .donation-form__post-donate__break, .donation-form__social-copy {
+  display: none;
+}
+
+
+
 // ---------------------- //
 // ✨ YOUR CUSTOM STYLES
 // ---------------------- //
