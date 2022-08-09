@@ -3,11 +3,31 @@
 // ---------------------- //
 
 $donationFormBorderColor: #FF9D00;
+$logoColor: #161650;
 
 
 // ORGANIC SHAPES //
 $hasOrganicShape: false; // apply randomized shape overlays to images
 
+// ---------------------- //
+// COLOUR OVERIDES
+// ---------------------- //
+
+.quotes__block {
+  .quotes__author {
+    color: $logoColor;
+  }
+}
+
+.quotes__bottom .quotes__author {
+  font-size: 1.5rem;
+}
+
+.row__container {
+  a {
+    color: $logoColor;
+  }
+}
 
 // ---------------------- //
 // ELEMENTS
