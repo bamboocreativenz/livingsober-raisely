@@ -13,19 +13,17 @@ $hasOrganicShape: false; // apply randomized shape overlays to images
 // COLOUR OVERIDES
 // ---------------------- //
 
-.quotes__block {
-  .quotes__author {
-    color: $logoColor;
-  }
-}
-
 .quotes__bottom .quotes__author {
   font-size: 1.5rem;
+  color: $logoColor;
 }
 
 .row__container {
   a {
     color: $logoColor;
+    &:hover {
+      color: mix(#fff, $logoColor, 40%);;
+    }
   }
 }
 
@@ -40,7 +38,7 @@ header.row .row__container {
     padding-right: 0;
   }
 }
-.header__social--desktop {
+.header__social--desktop, .header__social--mobile {
   display: none;
 }
 
@@ -67,6 +65,28 @@ header.row .row__container {
     border: solid 3px $donationFormBorderColor;
     &:after {
       color: #fff;
+    }
+  }
+}
+
+.header__menu {
+  &--desktop {
+    @include respond-to('tablet') {
+      display: inherit;
+    }
+    @include respond-to('mobile') {
+      display: none;
+    }
+    .page-navigation__link {
+      margin-bottom: 0;
+    }
+  }
+  &--mobile {
+    @include respond-to('tablet') {
+      display: none;
+    }
+    @include respond-to('mobile') {
+      display: inherit;
     }
   }
 }
