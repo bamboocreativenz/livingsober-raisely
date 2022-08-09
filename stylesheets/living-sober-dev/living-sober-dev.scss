@@ -69,6 +69,28 @@ header.row .row__container {
   }
 }
 
+.header__menu {
+  &--desktop {
+    @include respond-to('tablet') {
+      display: inherit;
+    }
+    @include respond-to('mobile') {
+      display: none;
+    }
+    .page-navigation__link {
+      margin-bottom: 0;
+    }
+  }
+  &--mobile {
+    @include respond-to('tablet') {
+      display: none;
+    }
+    @include respond-to('mobile') {
+      display: inherit;
+    }
+  }
+}
+
 // Hero Row
 .row--hero .row__container {
   padding-top: 0;
