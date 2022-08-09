@@ -152,8 +152,12 @@ header.row .row__container {
   }
 }
 
-.share, .donation-form__post-donate__subheading, .donation-form__post-donate__break, .donation-form__social-copy {
+.donation-form__post-donate .share, .donation-form__post-donate__subheading, .donation-form__post-donate__break, .donation-form__social-copy {
   display: none;
+}
+
+.donation-form__post-donate__heading {
+  padding: 0 1.5rem;
 }
 
 
