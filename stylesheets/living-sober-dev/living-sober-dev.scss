@@ -33,6 +33,25 @@ $hasOrganicShape: false; // apply randomized shape overlays to images
   }
 }
 
+.ls-form h2 {
+  color: $logoColor!important;
+  margin-top: 30px;
+}
+
+.raisely-blockwrapper .donation-form, .donation-form__body {
+  border-color: $logoColor;
+  background-color: #F7F3F0!important;
+}
+
+.donation-form__amount-btn, .donation-form__amount-type, .donation-form__other-field {
+  background: #FFFFFF!important;
+  color: $logoColor!important;
+  border: 3px solid #FF9D00!important;
+  &--selected {
+    background: #FFD99B!important;
+  }
+}
+
 // ---------------------- //
 // ELEMENTS
 // ---------------------- //
@@ -54,7 +73,7 @@ header.row .row__container {
     margin-right: 0px;
   }
   & a {
-    background: transparent;
+    background: #F7F3F0;
     color: $donationFormBorderColor!important;
     border: solid 3px $donationFormBorderColor;
     border-radius: 50px;
