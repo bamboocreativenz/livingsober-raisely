@@ -49,6 +49,7 @@ $hasOrganicShape: false; // apply randomized shape overlays to images
   border: 3px solid #FF9D00!important;
   &--selected {
     background: #FFD99B!important;
+    box-shadow: none!important;
   }
 }
 
